@@ -5,25 +5,56 @@ from PIL import  Image
 from io import BytesIO
 import random
 
-bot = commands.Bot('yuzu ')
+# bot = commands.Bot('yuzu ')
+
+bot = commands.Bot(command_prefix=["yuzu ","Yuzu "])
+
+# @bot.event
+# async def on_message(message):
+#     if bot.user.mentioned_in(message):
+#         await message.channel.send('okay')
 
 @bot.command()
 async def hello(ctx):                       #asyncronus func, ansyc libray    #ctx context have everything u need to interact with user
     await ctx.reply("hello!")
 
+
 @bot.command()
 async def hi(ctx):                      
-    await ctx.reply("hello!")
+    await ctx.reply("hii")
+
+    
+# @bot.command()
+# async def chirag(ctx):                      
+#      await ctx.reply("sexy boy hai ekdum")
+
+@bot.command()
+async def gagan(ctx):                      
+     await ctx.reply("uwu")
+
+
+@bot.command()
+async def avatar(ctx):
+    if avatar.content == '!avatar':
+        clientProfilePicture = avatar.author.avatar_url
+        await avatar.channel.send(clientProfilePicture)
+
 
 @bot.command()
 async def h(ctx):                      
     await ctx.reply("hello!")
 
-# @bot.command()
+
+@bot.command()
+async def mrthakur(ctx):                      
+    await ctx.reply("is a bonsai expert! ")
+
+# @bot.event
 # async def on_message(message):
 #     mention = f'<@!{bot.user.id}>'
 #     if mention in message.content:
-#         await message.channel.send("My prefix is 'yuzu' :D")
+#            await message.channel.send("My prefix is 'yuzu' :D")
+
 
 @bot.command()
 async def add(ctx, num1:int, num2:int):                      
@@ -31,10 +62,18 @@ async def add(ctx, num1:int, num2:int):
 
 
 @bot.command()
+async def purge(ctx, amount:int):
+    if amount >100:
+        await ctx.reply("limit's of 100;-;")
+    else:
+        await ctx.channel.purge(limit= amount)
+
+
+@bot.command()
 async def saanp(ctx, user : discord.Member = None):
     if user == None:
-        await ctx.reply("Who is...the snake?")
-    user = ctx.author
+        await ctx.reply("Who is... the snake?")
+    #user = ctx.author
 
     Snake = Image.open("snake1.jpg")
 
