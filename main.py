@@ -153,9 +153,8 @@ async def rps(ctx):
 
 
 
-load_dotenv()
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-bot.run(BOT_TOKEN)
+token = os.environ['BOT_TOKEN']
+bot.run(token)
 #132 10
 #449 449
 
