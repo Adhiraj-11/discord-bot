@@ -1,4 +1,3 @@
-from tkinter import BOTH
 import discord
 from discord import user
 from discord.ext import commands
@@ -6,7 +5,6 @@ from PIL import  Image
 from io import BytesIO
 import random
 import os
-from dotenv import load_dotenv
 
 # bot = commands.Bot('yuzu ')
 
