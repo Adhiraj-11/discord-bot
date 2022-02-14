@@ -24,16 +24,6 @@ async def hello(ctx):                       #asyncronus func, ansyc libray    #c
 async def hi(ctx):                      
     await ctx.reply("hii")
 
-    
-# @bot.command()
-# async def chirag(ctx):                      
-#      await ctx.reply("sexy boy hai ekdum")
-
-@bot.command()
-async def gagan(ctx):                      
-     await ctx.reply("uwu")
-
-
 @bot.command()
 async def avatar(ctx):
     if avatar.content == '!avatar':
@@ -125,31 +115,6 @@ async def rps(ctx):
             await ctx.send(f'HAHA BICH!! I JUST CRUSHED YOU!! I rock!!\nYour choice: {user_choice}\nMy choice: {comp_choice}')
         elif comp_choice == 'paper':
             await ctx.send(f'Bruh. >: |\nYour choice: {user_choice}\nMy choice: {comp_choice}')
-
-    # if user_choice == 'rock':
-    #     if comp_choice == 'rock':
-    #         await ctx.reply('Well, that was weird. We tied.\nYour choice: ', user_choice, '\nMy choice: ', comp_choice)
-    #     elif comp_choice == 'paper':
-    #         await ctx.reply('HAH, I won that time!!\nYour choice: ', user_choice, '\nMy choice: ', comp_choice)
-    #     elif comp_choice == 'scissors':
-    #         await ctx.reply("Aw, you beat me. It won't happen again!\nYour choice: ", user_choice, '\nMy choice: ', comp_choice)
-    # elif user_choice == 'paper':
-    #     if comp_choice == 'rock':
-    #         await ctx.reply('The pen beats the sword? More like the paper beats the rock!!\nYour choice: ', user_choice, '\nMy choice: ', comp_choice)
-    #     elif comp_choice == 'paper':
-    #         await ctx.reply('Oh, wacky. We just tied. I call a rematch!!\nYour choice: ', user_choice, '\nMy choice: ', comp_choice)
-    #     elif comp_choice == 'scissors':
-    #         await ctx.reply("Aw man, you actually managed to beat me.\nYour choice: ", user_choice, '\nMy choice: ', comp_choice)
-
-    # elif user_choice == 'scissors':
-    #     if comp_choice == 'rock':
-    #         await ctx.reply('HEH!! I JUST CRUSHED YOU!! I rock!!\nYour choice: ', user_choice, '\nMy choice: ', comp_choice)
-    #     elif comp_choice == 'paper':
-    #         await ctx.reply('Bruh. >: |\nYour choice: ', user_choice, '\nMy choice: ', comp_choice)
-    #     elif comp_choice == 'scissors':
-    #         await ctx.reply("Oh well, we tied.\nYour choice: ", user_choice, '\nMy choice: ', comp_choice)
-
-
 
 token = os.environ['BOT_TOKEN']
 bot.run(token)
