@@ -1,9 +1,12 @@
+from tkinter import BOTH
 import discord
 from discord import user
 from discord.ext import commands
 from PIL import  Image
 from io import BytesIO
 import random
+import os
+from dotenv import load_dotenv
 
 # bot = commands.Bot('yuzu ')
 
@@ -150,8 +153,9 @@ async def rps(ctx):
 
 
 
-
-bot.run("OTA0Mjk0MzA0Nzk1NzQyMjQ5.YX5bsw.4OUYIiZSWh-DyOgax4yp7kXeUTI")
+load_dotenv()
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+bot.run(BOT_TOKEN)
 #132 10
 #449 449
 
