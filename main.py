@@ -24,6 +24,13 @@ async def hello(ctx):                       #asyncronus func, ansyc libray    #c
 async def hi(ctx):                      
     await ctx.reply("hii")
 
+
+
+@bot.command()
+async def help(ctx):                      
+    await ctx.reply("I missed the part where thats my problem")
+
+
 @bot.command()
 async def avatar(ctx):
     if avatar.content == '!avatar':
@@ -34,6 +41,7 @@ async def avatar(ctx):
 @bot.command(pass_context = True)
 async def kick(ctx, userName: discord.User):
     await bot.kick(userName)
+
 
 # @bot.event
 # async def on_message(message):
