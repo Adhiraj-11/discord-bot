@@ -15,7 +15,7 @@ bot = commands.Bot(command_prefix=["yuzu ","Yuzu "])
 #     if bot.user.mentioned_in(message):
 #         await message.channel.send('okay')
 
-bot.remove_command("help")
+@bot.remove_command("help")
 
 @bot.command()
 async def hello(ctx):                       #asyncronus func, ansyc libray    #ctx context have everything u need to interact with user
