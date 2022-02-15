@@ -40,6 +40,10 @@ async def h(ctx):
 async def mrthakur(ctx):                      
     await ctx.reply("is a bonsai expert! ")
 
+@bot.command(pass_context = True)
+async def kick(ctx, userName: discord.User):
+    await bot.kick(userName)
+
 # @bot.event
 # async def on_message(message):
 #     mention = f'<@!{bot.user.id}>'
