@@ -35,11 +35,6 @@ async def avatar(ctx):
 async def h(ctx):                      
     await ctx.reply("hello!")
 
-
-@bot.command()
-async def mrthakur(ctx):                      
-    await ctx.reply("is a bonsai expert! ")
-
 @bot.command(pass_context = True)
 async def kick(ctx, userName: discord.User):
     await bot.kick(userName)
