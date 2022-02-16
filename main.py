@@ -27,6 +27,12 @@ async def hi(ctx):
     await ctx.reply("hii")
 
 
+@bot.command()
+async def helpp(ctx):                      
+    await ctx.reply("I missed the part where thats my problem")
+
+
+
 
 @bot.command()
 async def help(ctx):                      
