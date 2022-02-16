@@ -6,6 +6,7 @@ from io import BytesIO
 import random
 import os
 
+
 # bot = commands.Bot('yuzu ')
 
 bot = commands.Bot(command_prefix=["yuzu ","Yuzu "])
@@ -31,12 +32,24 @@ async def hi(ctx):
 async def helpp(ctx):                      
     await ctx.reply("I missed the part where thats my problem")
 
-
+@bot.command()
+async def join(ctx):
+    channel = ctx.author.voice.channel
+    await channel.connect()
+    await ctx.reply("joining vc!")
+@bot.command()
+async def leave(ctx):
+    await ctx.voice_client.disconnect()
+    # await ctx.reply("left the vc ;-;")
 
 
 @bot.command()
 async def help(ctx):                      
     await ctx.reply("I missed the part where thats my problem")
+
+@bot.command()
+async def lihaaf(ctx):                      
+    await ctx.reply("Lihaaf redefines the relationship between a lesbian identity, the Muslim household and the patriarchal institution. The unfolding of homosexual pleasure in a dysfunctional Muslim household is based on the nonreproductive premise of the relationship shared between the Nawab and his wife")
 
 
 @bot.command()
@@ -127,8 +140,8 @@ async def rps(ctx):
         elif comp_choice == 'paper':
             await ctx.send(f'Bruh. >: |\nYour choice: {user_choice}\nMy choice: {comp_choice}')
 
-token = os.environ['BOT_TOKEN']
-bot.run(token)
+# token = os.environ['BOT_TOKEN']
+bot.run("OTA0Mjk0MzA0Nzk1NzQyMjQ5.YX5bsw._lE6iXStpUeNpZ189D7WrAdLQZ0")
 #132 10
 #449 449
 
