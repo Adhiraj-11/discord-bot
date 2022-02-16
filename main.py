@@ -1,3 +1,4 @@
+from tokenize import Token
 import discord
 from discord import user
 from discord.ext import commands
@@ -40,7 +41,7 @@ async def join(ctx):
 @bot.command()
 async def leave(ctx):
     await ctx.voice_client.disconnect()
-    # await ctx.reply("left the vc ;-;")
+    await ctx.reply("left the vc ;-;")
 
 
 @bot.command()
@@ -141,7 +142,7 @@ async def rps(ctx):
             await ctx.send(f'Bruh. >: |\nYour choice: {user_choice}\nMy choice: {comp_choice}')
 
 # token = os.environ['BOT_TOKEN']
-bot.run("OTA0Mjk0MzA0Nzk1NzQyMjQ5.YX5bsw._lE6iXStpUeNpZ189D7WrAdLQZ0")
+bot.run("BOT TOKEN")
 #132 10
 #449 449
 
